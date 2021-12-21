@@ -1,0 +1,19 @@
+{
+  "name": "mercado-liebre",
+  "version": "1.0.0",
+  "description": "Una replica",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JAVASCRIPT"
+  ],
+  "author": "Juan Navarrete",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

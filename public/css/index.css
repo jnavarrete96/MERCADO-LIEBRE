@@ -1,0 +1,460 @@
+/*IMPORTS*/
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Meow+Script&family=Roboto:wght@300;400;500&display=swap');
+/*NORMALIZACIÓN*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*vincula a todas las etiquetas*/
+}
+
+/*VARIABLES*/
+:root{
+    /*colores*/
+    --amarillo:#eac926;
+    --azul:#03264c;
+    --azul2:#005eff;
+    --celeste:#1259c3;
+    --gris-oscuro:#666;
+    --gris-claro:#ebebeb;
+    --verde:#39b54a;
+    --negro:#000000;
+    --blanco:#FFFFFF;
+    /*tamaños de fuentes*/
+    --text-sm:1.2em;
+    --text-md:1.6em;
+    --text-lg:1.8em;
+    --title-md:2.4em;
+    /* familias de fuentes*/
+    --roboto:"Roboto", sans-serif;
+    --arimo: 'Arimo', sans-serif;   
+}
+/*ESTILOS COMUNES*/
+
+html{
+    font-size: 62.5%;
+    /*
+     dejando el font size al 62.5%
+     el rem por defecto 16px - con el font size del 62.5% el rem se vuelve 10px
+     el em por defecto 16px - con el fon size del 62.5% em se vuelve 10px
+    */
+    font-family:var(--roboto);
+}
+
+body{
+    background-color: var(--gris-claro);
+}
+
+h2{
+    font-size: var(--title-md);
+}
+
+p{
+    font-size: var(--text-sm);
+}
+
+.flex-row{
+    display: flex;
+    gap:20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+/* CABEZERA*/
+header{
+    background-color: var(--amarillo);
+}
+
+div.top-header{
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/*
+div.logo-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+*/
+
+/*
+
+div.mensaje{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+*/
+header picture.logo{
+    display: block; /*sirve para que picture se comporte como un div (bloque)*/
+    width: 49%;
+}
+
+.form{
+    width: 49%;
+}
+header nav{
+    font-size: var(--text-sm);
+    display: none;
+}
+
+header ul li {
+    list-style-type:none;
+}
+
+header ul li a{
+    text-decoration: none; /*quita el subrayado(interlineado)*/
+    color:var(--negro);
+}
+
+header .form .input{
+    background-color:var(--blanco);
+    border: 1px solid var(--negro);
+    color: var(--gris-oscuro);
+    overflow: hidden;
+}
+
+header .form .submit{
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    width:18px;
+    padding: 2px;
+}
+
+header div.top-header p{
+    text-align: center;
+}
+
+div.burger-menu{
+    text-align:center;
+}
+div.burger-menu i {
+    background-color:#0044aa;
+    font-size: 20px;
+    color:var(--blanco); /*color al icono*/
+    height: 40px; /*altura de la caja del icono*/
+    width: 40px;
+    margin:10px 0 20px 0;
+    padding:10px;
+    border-radius: 5px;
+}
+
+/*BANNER*/
+section.banner img{
+    width: 100%;
+}
+
+/*MAIN*/
+main{
+    width:90%;
+    margin: 0 auto;
+}
+main section article{
+    background-color: var(--blanco);
+    margin: 10px 0px;
+}
+main section article img{
+    width: 100%;
+}
+
+h2, .description{
+    color: var(--gris-oscuro);
+}
+
+
+.price{
+    font-size: var(--text-lg);
+}
+
+.discount, .description{
+    font-size: var(--text-md);
+}
+
+
+
+.description{
+    display: none;
+}
+
+main section article:hover .description{
+    display: block;
+}
+
+main section article i, .discount{
+    color: var(--verde);
+}
+main section article i{
+    font-size: var(--text-md);
+    border: 1px solid var(--verde); /*para hacer el circulo del icono del camión*/
+    border-radius: 50%; /* le da la forma del circulo*/
+    padding: 5px; /*relleno para agrandar el circulo*/
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 0.3s ease-in;  /*la transición para el camion*/
+}
+
+main section article:hover i{   /*cuando estamos en la etiqueta article el camion rota*/
+    transform: rotate(-90deg);
+}
+   
+main section h3 {
+    margin: 20px 0px;
+}
+
+article div.product-card{
+    width: 100%;
+    border: 1px solid var(--gris-claro);
+    padding: 15px;
+    position: relative; /*para acomodar el camion*/
+
+}
+
+/*PIE DE PÁGINA*/
+/*
+footer{
+    padding: 5%;
+}
+*/
+section.footer{
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    text-align: center;
+    padding: 3% 13% 3% 13%
+}
+
+section.footer article:hover div.credit-card, div.gift, div.user-shield{
+    color:#0022AA;
+}
+
+section.footer article:hover div.gift{
+    color:#0022AA;
+}
+
+section.footer article:hover div.user-shield{
+    color:#0022AA;
+}
+
+footer div.credit-card{
+    font-size: 25px;
+    color: var(--celeste);
+}
+
+footer div.gift{
+    font-size: 25px;
+    color: var(--celeste);
+}
+
+footer div.user-shield{
+    font-size: 25px;
+    color: var(--celeste);
+}
+
+h4{
+    font-size: var(--text-md);
+}
+p.copyright{
+    background-color: var(--blanco);
+    padding: 5%;
+    color: var(--gris-oscuro);
+}
+
+/*login.html*/
+
+main.login div.usuario-login{
+    width: 100%;
+    display: flex;
+    padding: 5%;
+    flex-direction: column;
+    row-gap: 40px;  
+}
+
+main.login input{
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--arimo);
+}
+
+main.login input.submit-login{
+    color: var(--blanco);
+    background-color: var(--azul2);
+    transition: background-color 0.4s ease;
+}
+main.login input.submit-login:hover{
+    background-color: var(--celeste);
+}
+/*register.html*/
+
+main.register{
+    display: flex;
+    width: 100%;
+    flex-direction: column;  
+}
+
+main.register .credentials, .birth-address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding: 3% 0;
+}
+
+main.register .credentials input, .birth-address input{
+    width: 90%;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--arimo);
+}
+
+main.register .birth-address{
+    row-gap: 20px;
+}
+
+main.register .birth_date, h4{
+    padding: 0 4.6%;
+    font-size: var(--text-md);
+    font-weight: 500;
+}
+
+main.register .profile{
+    display: flex;
+    padding: 3% 4.6%;
+}
+
+main.register .profile div{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    font-size: var(--text-sm);
+}
+
+main.register .interests, .user-pass{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 3% 4.6%;
+}
+
+main.register .interests div{
+    display: flex;
+    font-size: var(--text-sm);
+}
+
+main.register .interests div label{
+    margin-left: 5%;
+}
+
+main.register .user-pass div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main.register .user-pass .password{
+    row-gap: 10px;
+}
+
+main.register .user-pass .password input{
+    width: 90%;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--arimo);
+
+}
+main.register .user-pass input.reset{
+    margin-left: 3%;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (min-width:361px){
+    /*CAMBIOS DE HEADER*/
+    header nav{
+        display: block;
+    }
+
+    div.burger-menu{
+        display: none;
+    }
+
+    /*CAMBIOS DE MAIN*/
+    .description{
+        display: block;
+    }
+
+    /*
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    */
+
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .products-containers{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .products-containers article{
+        display: flex;
+        gap:10px;
+        flex-wrap: wrap;
+    }
+
+    .products-containers article{
+        max-width: 45%;
+    }
+
+}
+
+@media screen and (min-width:769px) {
+    /*CAMBIOS HEADER*/
+    div.top-header{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form , header picture.logo{
+        width: 30%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    div.menu-total{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0% 5%;
+        justify-content: space-between;
+    }
+
+    div.menu-total ul div{
+        display: flex;
+        gap: 30px;
+    }
+
+    /*CAMBIOS MAIN*/
+   .products-containers article{
+       max-width: 22%;
+   }
+
+   /*CAMBIOS FOOTER*/
+   section.footer{
+       display: flex;
+   }
+}
