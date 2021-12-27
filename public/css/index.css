@@ -98,6 +98,7 @@ header picture.logo{
 
 .form{
     width: 49%;
+    display: flex;
 }
 header nav{
     font-size: var(--text-sm);
@@ -118,6 +119,7 @@ header .form .input{
     border: 1px solid var(--negro);
     color: var(--gris-oscuro);
     overflow: hidden;
+    width: 100%;
 }
 
 header .form .submit{
@@ -125,6 +127,7 @@ header .form .submit{
     border: 1px solid var(--negro);
     width:18px;
     padding: 2px;
+    margin: 0 3px;
 }
 
 header div.top-header p{
@@ -388,7 +391,7 @@ main.register .user-pass input.reset{
 
     div.burger-menu{
         display: none;
-    }
+    } 
 
     /*CAMBIOS DE MAIN*/
     .description{
@@ -433,7 +436,7 @@ main.register .user-pass input.reset{
     .form , header picture.logo{
         width: 30%;
         display: flex;
-        justify-content: space-evenly;
+        /*justify-content: space-evenly;*/
     }
 
     div.menu-total{
